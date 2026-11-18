@@ -1,0 +1,15 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Build output
+dist/
+
+# OCR training data
+eng.traineddata

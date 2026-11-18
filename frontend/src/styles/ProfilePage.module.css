@@ -1,0 +1,285 @@
+:root {
+  --yellow: #fbc609;
+  --bg-dark: #1f1c2c;
+  --text-white: #ffffff;
+  --input-bg: #5b566a;
+  --content-width: 325px;
+}
+
+.container {
+  background-color: var(--bg-dark);
+  padding: 0 auto;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--content-width);
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.backButton {
+  position: absolute;
+  left: 0;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.avatarWrapper,
+.modalAvatarWrapper {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.centerOverlayIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.centerIcon {
+  font-size: 28px;
+  color: var(--yellow);
+  pointer-events: none;
+}
+
+.cameraIcon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(10%, 10%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #1e1e1e;
+  border: #fff solid 1px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.infoBlock,
+.buttonGroup,
+.notice,
+.logoutWrapper {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  margin-top: 170px;
+}
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+label {
+  font-size: 12px;
+  color: var(--text-white);
+}
+
+.readonlyField {
+  background-color: var(--input-bg);
+  color: var(--yellow);
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 0.75rem;
+  max-width: var(--content-width);
+}
+
+.inputField {
+  background-color: #ffffff;
+  color: #9e9e9e;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 14px;
+  outline: none;
+  max-width: var(--content-width);
+}
+
+.editButton,
+.saveButton,
+.cancelButton {
+  background-color: var(--yellow);
+  border: none;
+  padding: 0.75rem;
+  font-size: 16px;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 325px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.cancelButton {
+  background-color: #9e9e9e;
+  color: #333;
+}
+
+.buttonGroup {
+  width: 100%;
+  max-width: 325px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.notice {
+  font-weight: bold;
+  color: var(--yellow);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logoutWrapper {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 325px;
+  color: #9e9e9e;
+  font-size: 14px;
+  text-align: center;
+  z-index: 150;
+}
+
+.logoutLink {
+  color: var(--yellow);
+  margin-left: 0.25rem;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.error {
+  color: #ef5780;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.presetsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  justify-items: center;
+  padding: 1rem 0;
+}
+
+.avatarOptions {
+  width: 100%;
+  max-width: 325px;
+  margin: 1.5rem auto 0;
+  z-index: 1;
+  position: relative;
+}
+
+.option {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.option:hover {
+  transform: scale(1.05);
+  border-color: var(--yellow);
+}
+
+.selected {
+  border-color: var(--yellow);
+  box-shadow: 0 0 5px var(--yellow);
+}
+
+.editButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.saveBtn,
+.cancelBtn {
+  background-color: var(--yellow);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  max-width: 150px;
+}
+
+.cancelBtn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.modalAvatarWrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+}

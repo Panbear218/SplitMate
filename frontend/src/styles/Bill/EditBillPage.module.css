@@ -1,0 +1,261 @@
+.form {
+    padding: 25px;
+    background-color: #1f1c2c; 
+    color: white;
+    min-height: 100vh;
+    width: 325px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffc107;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.headerTitle {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 6px;
+}
+.backButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 0 ;
+    font-weight: normal;
+}
+
+.backButton:hover {
+    color: #f2c94c; 
+}
+
+.labelIcon {
+    width: 25px;
+    height: 25px;
+}
+.cameraIcon {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.row1 {
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    align-items: center;
+    width: 100%;
+}
+
+.rowName {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #d2d2d2;
+}
+
+.row2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.row3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    gap: 5px;
+    height: 40px;
+}
+
+.row4 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    gap: 5px;
+}
+.splitMethodSelect {
+    border: none;
+    font-family:"DM Sans", system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #d2d2d2;
+    background-color: #1f1c2c;
+    text-align: right; 
+}
+
+.select,
+.dateInput {
+    padding: 0 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2d2a3e;
+    color: white;
+    font-size: 14px;
+    font-family:"DM Sans", system-ui, Avenir, Helvetica, Arial, sans-serif;
+    flex:1;
+    min-width: 0;             
+    height: 40px;              
+    box-sizing: border-box;   
+    max-width: 100%;
+}
+
+.inputHalf {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2d2a3e;
+    color: white;
+    font-size: 14px;
+    flex: 1;
+    min-width: 0; 
+    height: 40px;            
+    box-sizing: border-box;  
+    min-width: 0; 
+    max-width: 100%;
+    font-family:"DM Sans", system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.splitBox {
+    margin-top: 10px;
+    background-color: #2a273a;
+    padding: 12px;
+    border-radius: 6px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+.memberList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.memberListItem {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+}
+
+.memberItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+    font-size: 15px;
+}
+
+.memberIcon {
+    width: 15px;
+}
+
+.memberName {
+    display: flex;
+    align-items: center;
+}
+
+.inputAmount {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background-color: #2a273a;
+    color: white;
+    text-align: right;
+    font-size: 15px;
+    width: 100px;
+}
+
+.rowSummary {
+    display: flex;
+    justify-content: space-between;
+    color: #fbc02d;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.addButton {
+    width: 325px;
+    background-color: #fbc02d;
+    color: black;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 100px;
+}
+
+.error {
+    color: #ef5780;
+    font-size: 14px;
+    text-align: center;
+    position: fixed;
+    bottom: 100px;
+    left: 20%;
+}
+
+.warning {
+    color: orange;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.processingOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1100;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #fbc02d;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.cameraWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    border-radius: inherit;
+    overflow: hidden;
+}

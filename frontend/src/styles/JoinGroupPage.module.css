@@ -1,0 +1,259 @@
+.container {
+  padding: 0 2rem;
+  color: white;
+  background: #1F1C2C;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  margin: 0 auto;
+  padding-bottom: 15px;
+  border-radius: 8px;
+}
+
+.sectionTitle {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.title {
+  text-align: center;
+  width: 300px;
+  margin: 3rem auto 2rem auto;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  display: block;
+  margin: 0;
+}
+
+.labelRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inlineError {
+  color: #e74c3c;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  height: 18px;
+}
+
+.inputError {
+  border-color: #ff4d4f !important;
+  box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.9);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputField {
+  margin: 0.5rem auto 1rem auto;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  background: #5b566a;
+  color: #fff;
+  font-size: 1.1rem;
+  display: block;
+  width: 325px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-5px);
+  }
+
+  40% {
+    transform: translateX(5px);
+  }
+
+  60% {
+    transform: translateX(-5px);
+  }
+
+  80% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.4s ease;
+}
+
+.joinButton {
+  width: 325px;
+  height: 50px;
+  padding: 16px;
+  margin-top: 20px;
+  background: #ffca28;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  font-weight: 700;
+  cursor: pointer;
+  display: block;
+}
+
+.joinButton:disabled {
+  background: #5b566a;
+  cursor: not-allowed;
+}
+
+.rejoinContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.error {
+  color: #f66;
+  text-align: center;
+}
+
+.membersListContainer {
+  width: 325px;
+  height: 300px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+}
+
+.membersList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.memberItem,
+.memberItemSelected,
+.memberItemReal {
+  padding: 16px 18px;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+  background-color: #5b566a;
+  height: 16.45px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.memberItem {
+  cursor: pointer;
+}
+
+.memberItem:hover {
+  background-color: #f0f0f0;
+}
+
+.memberItem:last-child,
+.memberItemSelected:last-child,
+.memberItemReal:last-child {
+  border-bottom: none;
+}
+
+.memberItem:hover {
+  background-color: #ffca28;
+}
+
+.memberItemSelected {
+  background-color: #ffca28;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.memberItemReal {
+  color: #ffffff;
+  cursor: default;
+  opacity: 0.7;
+  background-color: transparent;
+}
+
+.addButton {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  color: #ffca28;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.joinAsNewButton {
+  display: block;
+  height: 50px;
+  width: 325px;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  background-color: #5b566a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.joinAsNewButton:hover {
+  background-color: #ffca28;
+}
+
+.joinAsNewButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.memberItemSelected.joinAsNewButton {
+  background-color: #ffca28;
+  color: #000;
+  font-weight: bold;
+  height: 50px;
+}
+
+.backButton {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+
+.backButton:hover {
+  color: #f2c94c;
+}
+
+.inputErrorBelow {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  text-align: left;
+}

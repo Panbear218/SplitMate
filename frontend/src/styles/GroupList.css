@@ -1,0 +1,187 @@
+.group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 20px;
+  height: 500px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.group-item {
+  position: relative;
+  background-color: #5b566a;
+  padding: 16px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: background-color 0.2s ease;
+  width: 325px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 25%;
+  right: 3%;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: white;
+  width: 24px;
+  height: 24px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  color: #ef5780;
+}
+
+.group-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.group-icon.yellow {
+  background-color: #ffca28;
+}
+
+.group-icon.white {
+  background-color: #fff;
+}
+
+.group-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.group-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.group-date {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.confirm-card {
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 3px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  height: 50px;
+  align-items: center;
+}
+
+.confirm-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.confirm-btn {
+  width: 70px;
+  height: 35px;
+  gap: 9px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14;
+}
+
+.confirm-btn.yes {
+  background-color: #ef5780;
+  color: white;
+}
+
+.confirm-btn.no {
+  background-color: #aaa;
+  color: white;
+}
+
+.loading,
+.error {
+  padding: 1rem;
+  text-align: center;
+  color: #ccc;
+}
+
+.toast-success,
+.toast-error {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  animation: fadeOut 3s forwards;
+  text-align: center;
+}
+
+.toast-success {
+  background-color: grey;
+}
+
+.toast-error {
+  background-color: #ffca28;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.groupIcon {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 1.5rem auto 0.3rem;
+  display: block;
+}
+
+.welcome {
+  text-align: center;
+  margin-top: 3rem;
+  color: #d1d5db;
+  cursor: default;
+}
+
+.welcome-title {
+  color: var(--yellow);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-text {
+  color: #ffffff;
+  font-size: 16px;
+}

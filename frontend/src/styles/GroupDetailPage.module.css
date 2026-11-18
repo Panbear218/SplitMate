@@ -1,0 +1,385 @@
+.container {
+  min-height: 100vh;
+  width: 325px;
+  margin: 0 auto;
+  color: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 326px;
+  margin-top: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.groupIconWrapper{
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+.backButton {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 ;
+}
+
+.inviteCode {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.codeValue {
+  color: #FBC609;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.groupIcon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+}
+
+.infoSection {
+  width: 325px;
+  height:70px;
+  padding-bottom: 20px;
+}
+
+.label {
+  color: white;
+  height: 18px;
+}
+
+.membersTitle {
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin: 0;
+}
+
+.membersListContainer {
+  max-height: 260px;
+  overflow-y: auto;
+  width: 325px;
+  border-radius: 8px;
+}
+
+.membersList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.membersList li {
+  background: #5B566a;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 14.5px 18px;
+  height: 20.49px;
+}
+
+.readOnlyMember{
+  color:#FBC609;
+}
+
+.editMembers{
+  color: white;
+}
+
+.inputField,
+.newMemberName {
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: white;
+  border: none;
+  outline: none; 
+}
+
+.inputField.readOnly {
+  color: #ffca28;
+  background-color: #5B566a;
+  pointer-events: none;
+}
+
+.inputField{
+  padding: 14.5px 18px;
+  width: 289.01px; 
+  height: 21.01px;
+}
+
+.newMemberName{
+  padding: 8px 18px;
+  width: 180px;
+  height: 15px;
+}
+
+.editButton,
+.cancelEditButton {
+  text-align: center;
+  border: none;
+  padding: 17px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 325px;
+  height: 50px;
+}
+
+.editButton{
+  background-color: #ffca28;
+  color: black;
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.groupIconContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cameraIcon {
+  position: absolute;
+  bottom: 10px;
+  right: -5px;
+  background-color:#ffca28;
+  color:#1F1C2C;
+  border-radius: 50%;
+  padding: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: #fff solid 1px;
+  transition: background-color 0.2s ease;
+}
+.cameraIcon:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.groupIconWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  animation: fadeOut 3s forwards;
+  text-align: center;
+  background-color: #ffca28;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.addMemberButton {
+  background: none;
+  border: none;
+  color: #FBC609;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 1rem;
+}
+
+.saveButton,
+.cancelButton {
+  color: white;
+  border: none;
+  padding: 4px 7px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.saveButton {
+  background-color: #FBC609;
+}
+
+.cancelButton {
+  background-color: #ccc;
+}
+
+.membersSection {
+  width: 325px;
+  height: 250px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.membersListContainer {
+  height: 240px;
+}
+
+.memberItem {
+  display: flex;
+  justify-content: space-between;
+  overflow: scroll;
+  scrollbar-width: none;
+  background-color: #9e9e9e;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.deleteBtn {
+  width: 19px;
+  height: 19px;
+  color: #9e9e9e;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  background-color: #ccc;
+}
+
+.deleteBtn:hover {
+  background-color: #ffca28;
+  color: black;
+}
+
+.labelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inlineError {
+  color: #e74c3c;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  height: 18px;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 300px;
+  width: 90%;
+}
+
+.modalContent h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.modalContent p {
+  font-size: 14;
+  word-wrap: break-word;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.cancelMoalButton,
+.deleteMemberBtn {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16;
+  font-weight: bold;
+  height: 50px;
+}
+
+.cancelMoalButton {
+  background-color: #ccc;
+  color: #333;
+}
+
+.cancelMoalButton:hover {
+  background-color: #bbb;
+}
+
+.deleteMemberBtn {
+  background-color: #EF5780;
+  color: white;
+}
+
+.deleteMemberBtn:hover {
+  background-color: #d32f2f;
+}
+
+.copyIcon {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  cursor: pointer;
+  vertical-align: middle;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.copyIcon:hover {
+  color: white;
+}

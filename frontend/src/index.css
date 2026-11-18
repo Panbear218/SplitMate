@@ -1,0 +1,85 @@
+:root {
+  font-family: "DM Sans", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #1f1c2c;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #1f1c2c;
+  overflow-x: hidden;
+  height: 100%;
+  padding: 0;
+
+}
+
+.btn {
+  width: 100%;
+  max-width: 325px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  border: none;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DMSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DMSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #ffca28;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 360px) {
+  .btn {
+    max-width: 90%; 
+    height: 44px;
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn {
+    max-width: 360px;
+    height: 56px;
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+}

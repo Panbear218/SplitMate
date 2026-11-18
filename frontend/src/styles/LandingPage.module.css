@@ -1,0 +1,121 @@
+:root {
+  --yellow: #fbc609;
+  --bg-dark: #1F1C2C;
+  --text-white: #ffffff;
+}
+
+.landingContainer {
+  min-height: 100vh;
+  background-image: url("/images/landing-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem 2rem 7.5rem;
+  color: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 325px;
+  margin: 0 auto;
+}
+
+.logoImage {
+  height: 1.5em;
+  width: auto;
+  vertical-align: baseline;
+  display: inline-block;
+}
+
+.landingHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.landingSubtitle {
+  color: var(--yellow);
+  font-size: 1rem;
+  margin-bottom: -1rem;
+}
+
+.landingTitle {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.titleYellow {
+  color: var(--yellow);
+}
+
+.titleWhite {
+  color: var(--text-white);
+}
+
+.smallRight {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  position: relative;
+  top: -1.2em;
+}
+
+.landingButtons {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 325px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 2rem;
+  z-index: 100;
+}
+
+.loginBtn {
+  background-color: var(--yellow);
+  color: black;
+}
+
+.loginBtn:hover {
+  background-color: rgba(251, 198, 9, 0.8);
+}
+
+.signupBtn {
+  background-color: transparent;
+  color: var(--text-white);
+  border: 1px solid var(--text-white);
+}
+
+.signupBtn:hover {
+  background-color: var(--text-white);
+  color: black;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 360px) {
+  .landingTitle {
+    font-size: 2rem;
+  }
+
+  .landingSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .landingContainer {
+    padding: 2.7rem 1.5rem 2.3rem 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .landingTitle {
+    font-size: 3rem;
+  }
+
+  .landingSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .landingContainer {
+    padding: 3rem;
+  }
+}
